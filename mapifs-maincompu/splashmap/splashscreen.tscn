@@ -1,0 +1,95 @@
+[gd_scene load_steps=7 format=3 uid="uid://5mehyhipfmmc"]
+
+[ext_resource type="Script" path="res://splashmap/script/splashscreen.gd" id="1_tm7gc"]
+[ext_resource type="Texture2D" uid="uid://drwcqgnpv0aa2" path="res://imagens/logo.png" id="2_ad5if"]
+
+[sub_resource type="Animation" id="Animation_fjih4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.886275, 0.890196, 0.952941, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_cryag"]
+resource_name = "fade_in"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.141176, 0.141176, 0.141176, 1), Color(0.141176, 0.141176, 0.141176, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_dggvi"]
+resource_name = "fade_out"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.141176, 0.141176, 0.141176, 0), Color(0.886275, 0.890196, 0.952941, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_urhcy"]
+_data = {
+"RESET": SubResource("Animation_fjih4"),
+"fade_in": SubResource("Animation_cryag"),
+"fade_out": SubResource("Animation_dggvi")
+}
+
+[node name="splashscreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tm7gc")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ad5if")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.886275, 0.890196, 0.952941, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_urhcy")
+}
+autoplay = "fade_in"
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

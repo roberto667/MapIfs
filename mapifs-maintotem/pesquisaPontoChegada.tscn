@@ -1,0 +1,3229 @@
+[gd_scene load_steps=7 format=3 uid="uid://q1sjvaef12qu"]
+
+[ext_resource type="Script" path="res://pesquisaPontoPartida.gd" id="1_jl2jy"]
+[ext_resource type="Script" path="res://GridContainer.gd" id="3_8squ5"]
+[ext_resource type="Script" path="res://local2.gd" id="3_raxqa"]
+[ext_resource type="FontFile" uid="uid://chjlkxeei1r3s" path="res://bentham/Bentham-Regular.ttf" id="3_vf4e3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ret28"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.858824, 0.866667, 0.882353, 1)
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+shadow_size = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_222ir"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.858824, 0.866667, 0.882353, 1)
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+shadow_size = 1
+
+[node name="Control" type="Control"]
+z_index = 1290
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jl2jy")
+
+[node name="searchBar" type="LineEdit" parent="."]
+top_level = true
+z_index = 2160
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -904.0
+offset_right = 904.0
+offset_bottom = 102.0
+grow_horizontal = 2
+scale = Vector2(0.996478, 1.00458)
+theme_override_colors/font_color = Color(0.235294, 0.247059, 0.254902, 1)
+theme_override_colors/font_selected_color = Color(0.235294, 0.247059, 0.254902, 1)
+theme_override_colors/font_uneditable_color = Color(0.235294, 0.247059, 0.254902, 1)
+theme_override_colors/font_placeholder_color = Color(0.235294, 0.247059, 0.254902, 1)
+theme_override_colors/font_outline_color = Color(0.235294, 0.247059, 0.254902, 1)
+theme_override_colors/caret_color = Color(0.235294, 0.247059, 0.254902, 1)
+theme_override_colors/selection_color = Color(0.235294, 0.247059, 0.254902, 1)
+theme_override_colors/clear_button_color = Color(0.235294, 0.247059, 0.254902, 1)
+theme_override_colors/clear_button_color_pressed = Color(0.235294, 0.247059, 0.254902, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxFlat_ret28")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ret28")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_ret28")
+placeholder_text = "Digite ou selecione o local desejado a partir dos grupos abaixo"
+alignment = 1
+clear_button_enabled = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -1379.0
+offset_top = -1078.0
+offset_right = -1291.0
+offset_bottom = -972.0
+scale = Vector2(54.2734, 30.3131)
+
+[node name="Grid" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -121.0
+offset_top = 215.0
+offset_right = 101.0
+offset_bottom = 508.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+columns = 3
+script = ExtResource("3_8squ5")
+
+[node name="SalasELab" type="Button" parent="Grid"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "Salas de Aula e Laboratórios"
+
+[node name="SetoresAdministrativos" type="Button" parent="Grid"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "Setores Administrativos"
+
+[node name="Coordenações" type="Button" parent="Grid"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "Coordenações"
+
+[node name="Button" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button2" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button3" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button4" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button5" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button6" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button7" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button8" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button9" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button10" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button11" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button12" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button13" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button14" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button15" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button16" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button17" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button18" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button19" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button20" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button21" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button22" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button23" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button24" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button25" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button26" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button27" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button28" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button29" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button30" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button31" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button32" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button33" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button34" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button35" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button36" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button37" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button38" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button39" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button40" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button41" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button42" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button43" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button44" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button45" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button46" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button47" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button48" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button49" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button50" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button51" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button52" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button53" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button54" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button55" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button56" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button57" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button58" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button59" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button60" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button61" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button62" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button63" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button64" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button65" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button66" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button67" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button68" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button69" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button70" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button71" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button72" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button73" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button74" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button75" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button76" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button77" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button78" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button79" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button80" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button81" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button82" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button83" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button84" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button85" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button86" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button87" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button88" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button89" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button90" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button91" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button92" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button93" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button94" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button95" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button96" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button97" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button98" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button99" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button100" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button101" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button102" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button103" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button104" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button105" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button106" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button107" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button108" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[node name="Button109" type="Button" parent="Grid"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vf4e3")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_222ir")
+theme_override_styles/focus = SubResource("StyleBoxFlat_222ir")
+text = "qwdq"
+script = ExtResource("3_raxqa")
+
+[connection signal="text_changed" from="searchBar" to="." method="_on_search_bar_text_changed"]
+[connection signal="pressed" from="Grid/SalasELab" to="." method="_on_salas_e_lab_pressed"]
+[connection signal="pressed" from="Grid/SetoresAdministrativos" to="." method="_on_setores_administrativos_pressed"]
+[connection signal="pressed" from="Grid/Coordenações" to="." method="_on_coordenações_pressed"]
+[connection signal="pressed" from="Grid/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button" to="Grid/Button" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button2" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button2" to="Grid/Button2" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button3" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button3" to="Grid/Button3" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button4" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button4" to="Grid/Button4" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button5" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button5" to="Grid/Button5" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button6" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button6" to="Grid/Button6" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button7" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button7" to="Grid/Button7" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button8" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button8" to="Grid/Button8" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button9" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button9" to="Grid/Button9" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button10" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button10" to="Grid/Button10" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button11" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button11" to="Grid/Button11" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button12" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button12" to="Grid/Button12" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button13" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button13" to="Grid/Button13" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button14" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button14" to="Grid/Button14" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button15" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button15" to="Grid/Button15" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button16" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button16" to="Grid/Button16" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button17" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button17" to="Grid/Button17" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button18" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button18" to="Grid/Button18" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button19" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button19" to="Grid/Button19" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button20" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button20" to="Grid/Button20" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button21" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button21" to="Grid/Button21" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button22" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button22" to="Grid/Button22" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button23" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button23" to="Grid/Button23" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button24" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button24" to="Grid/Button24" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button25" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button25" to="Grid/Button25" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button26" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button26" to="Grid/Button26" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button27" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button27" to="Grid/Button27" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button28" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button28" to="Grid/Button28" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button29" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button29" to="Grid/Button29" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button30" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button30" to="Grid/Button30" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button31" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button31" to="Grid/Button31" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button32" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button32" to="Grid/Button32" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button33" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button33" to="Grid/Button33" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button34" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button34" to="Grid/Button34" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button35" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button35" to="Grid/Button35" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button36" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button36" to="Grid/Button36" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button37" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button37" to="Grid/Button37" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button38" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button38" to="Grid/Button38" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button39" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button39" to="Grid/Button39" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button40" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button40" to="Grid/Button40" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button41" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button41" to="Grid/Button41" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button42" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button42" to="Grid/Button42" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button43" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button43" to="Grid/Button43" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button44" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button44" to="Grid/Button44" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button45" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button45" to="Grid/Button45" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button46" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button46" to="Grid/Button46" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button47" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button47" to="Grid/Button47" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button48" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button48" to="Grid/Button48" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button49" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button49" to="Grid/Button49" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button50" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button50" to="Grid/Button50" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button51" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button51" to="Grid/Button51" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button52" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button52" to="Grid/Button52" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button53" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button53" to="Grid/Button53" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button54" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button54" to="Grid/Button54" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button55" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button55" to="Grid/Button55" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button56" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button56" to="Grid/Button56" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button57" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button57" to="Grid/Button57" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button58" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button58" to="Grid/Button58" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button59" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button59" to="Grid/Button59" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button60" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button60" to="Grid/Button60" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button61" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button61" to="Grid/Button61" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button62" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button62" to="Grid/Button62" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button63" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button63" to="Grid/Button63" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button64" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button64" to="Grid/Button64" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button65" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button65" to="Grid/Button65" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button66" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button66" to="Grid/Button66" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button67" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button67" to="Grid/Button67" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button68" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button68" to="Grid/Button68" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button69" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button69" to="Grid/Button69" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button70" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button70" to="Grid/Button70" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button71" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button71" to="Grid/Button71" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button72" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button72" to="Grid/Button72" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button73" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button73" to="Grid/Button73" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button74" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button74" to="Grid/Button74" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button75" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button75" to="Grid/Button75" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button76" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button76" to="Grid/Button76" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button77" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button77" to="Grid/Button77" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button78" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button78" to="Grid/Button78" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button79" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button79" to="Grid/Button79" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button80" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button80" to="Grid/Button80" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button81" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button81" to="Grid/Button81" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button82" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button82" to="Grid/Button82" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button83" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button83" to="Grid/Button83" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button84" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button84" to="Grid/Button84" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button85" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button85" to="Grid/Button85" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button86" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button86" to="Grid/Button86" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button87" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button87" to="Grid/Button87" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button88" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button88" to="Grid/Button88" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button89" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button89" to="Grid/Button89" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button90" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button90" to="Grid/Button90" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button91" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button91" to="Grid/Button91" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button92" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button92" to="Grid/Button92" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button93" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button93" to="Grid/Button93" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button94" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button94" to="Grid/Button94" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button95" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button95" to="Grid/Button95" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button96" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button96" to="Grid/Button96" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button97" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button97" to="Grid/Button97" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button98" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button98" to="Grid/Button98" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button99" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button99" to="Grid/Button99" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button100" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button100" to="Grid/Button100" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button101" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button101" to="Grid/Button101" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button102" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button102" to="Grid/Button102" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button103" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button103" to="Grid/Button103" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button104" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button104" to="Grid/Button104" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button105" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button105" to="Grid/Button105" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button106" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button106" to="Grid/Button106" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button107" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button107" to="Grid/Button107" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button108" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button108" to="Grid/Button108" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Button109" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Grid/Button109" to="Grid/Button109" method="_on_pressed"]
